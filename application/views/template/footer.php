@@ -6,13 +6,24 @@
 						<h2 class="ftco-heading-2">Alamat Sekolah</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San
-										Francisco, California, USA</span></li>
+								<li><span class="icon icon-map-marker"></span><span class="text">Jl. Lambung Mangkurat Rt 05 Desa Palampitan Hulu Kec. Amuntai Tengah Kab. Hulu Sungai utara 71419</span></li>
 								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
 								<li><a href="#"><span class="icon icon-envelope"></span><span
 											class="text">info@yourdomain.com</span></a></li>
 							</ul>
 						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="ftco-footer-widget mb-5 ml-md-4">
+						<h2 class="ftco-heading-2">Halaman</h2>
+						<ul class="list-unstyled">
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Profil</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Akademisi</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Dokumentasi</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>PPDB</a></li>
+						</ul>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
@@ -43,18 +54,6 @@
 					</div> -->
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="ftco-footer-widget mb-5 ml-md-4">
-						<h2 class="ftco-heading-2">Halaman</h2>
-						<ul class="list-unstyled">
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Beranda</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Profil</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Akademisi</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Dokumentasi</a></li>
-							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>PPDB</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
 					<!-- <div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2">Subscribe Us!</h2>
 						<form action="#" class="subscribe-form">
@@ -67,9 +66,9 @@
 					<div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2 mb-0">Terhubung dengan kami</h2>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+							<li class="ftco-animate"><a href="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="https://facebook.com/"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="https://instagram.com/"><span class="icon-instagram"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -111,10 +110,36 @@
 	<script src="<?= base_url() ?>assets/js/aos.js"></script>
 	<script src="<?= base_url() ?>assets/js/jquery.animateNumber.min.js"></script>
 	<script src="<?= base_url() ?>assets/js/scrollax.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
 	</script>
-	<script src="<?= base_url() ?>assets/js/google-map.js"></script>
+	<script src="<?= base_url() ?>assets/js/google-map.js"></script> -->
 	<script src="<?= base_url() ?>assets/js/main.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$('#ppdb-custom').on('mouseover', function() {
+				$('#sub-0').removeClass('show');
+				$('#sub-1').removeClass('show');
+				$('#sub-2').removeClass('show');
+			});
+
+			$('.dropdown-submenu a.submenu, li.submenu').on({
+				mouseenter: function(e) {
+					$(this).children('ul').toggle()
+					// $(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				},
+				mouseleave: function(e) {
+					$(this).children('ul').toggle()
+					// $(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				}
+			});
+		});
+	</script>
 
 </body>
 
