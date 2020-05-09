@@ -1,20 +1,20 @@
 <footer class="ftco-footer ftco-bg-dark ftco-section">
 		<div class="container">
 			<div class="row mb-5">
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2">Alamat Sekolah</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">Jl. Lambung Mangkurat Rt 05 Desa Palampitan Hulu Kec. Amuntai Tengah Kab. Hulu Sungai utara 71419</span></li>
+								<li><span class="icon icon-map-marker"></span><span class="text">Jl. Lambung Mangkurat RT 05 Desa Palampitan Hulu Kec. Amuntai Tengah Kab. Hulu Sungai utara 71419</span></li>
 								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
 								<li><a href="#"><span class="icon icon-envelope"></span><span
-											class="text">info@yourdomain.com</span></a></li>
+											class="text">muhammadriyadhi08@gmail.com</span></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="ftco-footer-widget mb-5 ml-md-4">
 						<h2 class="ftco-heading-2">Halaman</h2>
 						<ul class="list-unstyled">
@@ -26,34 +26,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<!-- <div class="ftco-footer-widget mb-5">
-						<h2 class="ftco-heading-2">Recent Blog</h2>
-						<div class="block-21 mb-4 d-flex">
-							<a class="blog-img mr-4" style="background-image: url(<?= base_url() ?>assets/images/image_1.jpg);"></a>
-							<div class="text">
-								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-								<div class="meta">
-									<div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-									<div><a href="#"><span class="icon-person"></span> Admin</a></div>
-									<div><a href="#"><span class="icon-chat"></span> 19</a></div>
-								</div>
-							</div>
-						</div>
-						<div class="block-21 mb-5 d-flex">
-							<a class="blog-img mr-4" style="background-image: url(<?= base_url() ?>assets/images/image_2.jpg);"></a>
-							<div class="text">
-								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-								<div class="meta">
-									<div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-									<div><a href="#"><span class="icon-person"></span> Admin</a></div>
-									<div><a href="#"><span class="icon-chat"></span> 19</a></div>
-								</div>
-							</div>
-						</div>
-					</div> -->
-				</div>
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<!-- <div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2">Subscribe Us!</h2>
 						<form action="#" class="subscribe-form">
