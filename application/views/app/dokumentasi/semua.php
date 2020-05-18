@@ -1,22 +1,22 @@
 <section class="ftco-section bg-light">
     <div class="container">
       <div class="row">
+        <?php foreach($dokumentasi as $d): ?>
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end"
-              style="background-image: url('<?= base_url() ?>assets/images/image_1.jpg');">
+            <a href="<?= base_url('Landing/single_dokumentasi/'). $d['id'] ?>" class="block-20 d-flex align-items-end"
+              style="background-image: url('<?= base_url() ?>assets/<?= $d['gambar'] ?>');">
               <div class="meta-date text-center p-2">
-                <span class="day">26</span>
-                <span class="mos">June</span>
-                <span class="yr">2019</span>
+                <span class="day"><?= date('d', strtotime($d['tanggal_dibuat'])) ?></span>
+                <span class="mos"><?= date('M', strtotime($d['tanggal_dibuat'])) ?></span>
+                <span class="yr"><?= date('Y', strtotime($d['tanggal_dibuat'])) ?></span>
               </div>
             </a>
             <div class="text bg-white p-4">
-              <h3 class="heading"><a href="#">Perpisahan 2019/2020</a></h3>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts.</p>
+              <h3 class="heading"><a href="#"><?= $d['judul'] ?></a></h3>
+              <p><?= $d['konten'] ?></p>
               <div class="d-flex align-items-center mt-4">
-                <p class="mb-0"><a href="#" class="btn btn-primary">Lanjut Baca <span
+                <p class="mb-0"><a href="<?= base_url('Landing/single_dokumentasi/'). $d['id'] ?>" class="btn btn-primary">Lanjut Baca <span
                       class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
                   <!-- <a href="#" class="mr-2">Admin</a>
@@ -26,7 +26,10 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 ftco-animate">
+        <?php endforeach; ?>
+        
+        <!-- untuk backup -->
+        <!-- <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="blog-single.html" class="block-20 d-flex align-items-end"
               style="background-image: url('<?= base_url() ?>assets/images/image_2.jpg');">
@@ -44,8 +47,6 @@
                 <p class="mb-0"><a href="#" class="btn btn-primary">Lanjut Baca <span
                       class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <!-- <a href="#" class="mr-2">Admin</a>
-                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
                 </p>
               </div>
             </div>
@@ -69,8 +70,6 @@
                 <p class="mb-0"><a href="#" class="btn btn-primary">Lanjut Baca <span
                       class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <!-- <a href="#" class="mr-2">Admin</a>
-                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
                 </p>
               </div>
             </div>
@@ -95,8 +94,6 @@
                 <p class="mb-0"><a href="#" class="btn btn-primary">Lanjut Baca <span
                       class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <!-- <a href="#" class="mr-2">Admin</a>
-                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
                 </p>
               </div>
             </div>
@@ -120,8 +117,6 @@
                 <p class="mb-0"><a href="#" class="btn btn-primary">Lanjut Baca <span
                       class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <!-- <a href="#" class="mr-2">Admin</a>
-                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
                 </p>
               </div>
             </div>
@@ -145,13 +140,12 @@
                 <p class="mb-0"><a href="#" class="btn btn-primary">Lanjut Baca <span
                       class="ion-ios-arrow-round-forward"></span></a></p>
                 <p class="ml-auto mb-0">
-                  <!-- <a href="#" class="mr-2">Admin</a>
-                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+        <!-- akhir untuk backup -->
       </div>
     </div>
   </section>

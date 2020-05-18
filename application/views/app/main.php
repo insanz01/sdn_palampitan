@@ -122,15 +122,18 @@
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
 					<h2 class="mb-4"><span>VISI</span></h2>
-					<p class="font-besar">TERDIDIK DAN SANTUN DALAM PERILAKU</p>
+					<p class="font-besar"><?= $visi['konten'] ?></p>
 					<br>
 					<h2 class="mb-4"><span>MISI</span></h2>
 					<ol class="text-center font-besar">
-						<li>Melaksanakan pembelajaran dan bimbingan secara efektif, sehingga setiap siswa dapat berkembang secara optimal sesuai dengan potensi yang dimilikinya</li>
+						<?php foreach($misi as $m): ?>
+							<li> <?= $m['konten'] ?> </li>
+						<?php endforeach; ?>
+						<!-- <li>Melaksanakan pembelajaran dan bimbingan secara efektif, sehingga setiap siswa dapat berkembang secara optimal sesuai dengan potensi yang dimilikinya</li>
 						<li>Mengembangkan dan menumbuhkan perilaku disiplin warga sekolah</li>
 						<li>Membina siswa agar berperilaku santun untuk menuju sikap yang berakhlak mulia</li>
 						<li>Membimbing dan mengembangkan bakat dan minat peserta didik</li>
-						<li>Menanamkan dan menumbuhkan penghayatan terhadap ajaran agama</li>
+						<li>Menanamkan dan menumbuhkan penghayatan terhadap ajaran agama</li> -->
 					</ol>
 				</div>
 			</div>

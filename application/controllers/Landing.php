@@ -8,24 +8,35 @@ class Landing extends CI_Controller {
     parent::__construct();
 
     $this->load->model('PPDB_Model', 'ppdb');
+    $this->load->model('Visi_Misi_Model', 'visi_misi');
+    $this->load->model('Akademik_Model', 'akademik');
+    $this->load->model('Dokumentasi_Model', 'dokumentasi');
+    $this->load->model('Karyawan_Model', 'karyawan');
     
     $this->data['judul_aplikasi'] = "SEKOLAH DASAR NEGERI PALAMPITAN";
     $this->data['mendaftar'] = FALSE;
   }
 
   public function index() {
+
+    $data['visi'] = $this->visi_misi->tampilkan_visi();
+    $data['misi'] = $this->visi_misi->tampilkan_misi();
+    
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
-    $this->load->view('app/main');
+    $this->load->view('app/main', $data);
     $this->load->view('template/footer');
   }
 
   public function profil() {
+    $data['guru'] = $this->karyawan->tampilkan_karyawan('Guru');
+    $data['staff'] = $this->karyawan->tampilkan_karyawan('Staff');
+
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
-    $this->load->view('app/profil/semua');
+    $this->load->view('app/profil/semua', $data);
     $this->load->view('template/footer');
   }
 
@@ -38,6 +49,8 @@ class Landing extends CI_Controller {
     $data['tahun_satu'] = $tahun;
     $data['tahun_dua'] = $tahun + 1;
 
+    $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required');
+
     if($this->form_validation->run() === FALSE) {
       $this->load->view('template/header', $this->data);
       $this->load->view('template/topbar');
@@ -49,7 +62,7 @@ class Landing extends CI_Controller {
         'id' => '',
         'nama_lengkap' => $this->input->post('nama_lengkap'),
         'nama_panggilan' => $this->input->post('nama_panggilan'),
-        'NIK_siswa' => $this->input->post('NIK_siswa'),
+        'NIK' => $this->input->post('NIK_siswa'),
         'jenis_kelamin' => $this->input->post('jenis_kelamin'),
         'tempat_lahir' => $this->input->post('tempat_lahir'),
         'tanggal_lahir' => $this->input->post('tanggal_lahir'),
@@ -63,13 +76,13 @@ class Landing extends CI_Controller {
         'berat_badan' => $this->input->post('berat_badan'),
         'tinggi_badan' => $this->input->post('tinggi_badan'),
         'golongan_darah' => $this->input->post('golongan_darah'),
-        'memiliki_penyakit' => $this->input->post('memiliki_penyakit'),
+        'memiliki_penyakit' => $this->input->post('penyakit'),
         'alamat' => $this->input->post('alamat'),
         'tinggal_dengan' => $this->input->post('tinggal_dengan'),
         'nomor_hp' => $this->input->post('nomor_hp'),
-        'status' => $this->input->post('terdaftar'),
+        'status' => 'terdaftar',
         'tahun_ajaran' => $this->input->post('tahun_ajaran'),
-        'tanggal_mendaftar' => data('Y-m-d', time())
+        'tanggal_mendaftar' => date('Y-m-d', time())
       ];
 
       $data_ortu = [
@@ -93,12 +106,12 @@ class Landing extends CI_Controller {
       ];
 
       $data_asal_siswa = [
-        'id' => $this->input->post('id'),
+        'id' => '',
         'id_siswa' => NULL,
         'masuk_sebagai' => $this->input->post('masuk_sebagai'),
         'asal_siswa' => $this->input->post('asal_siswa'),
         'nama_sekolah' => $this->input->post('nama_sekolah'),
-        'nomor_tahun_SK' => $this->input->post('nomor_tahun_SK'),
+        'nomor_tahun_SK' => $this->input->post('nomor_tahun_sk'),
         'lama_belajar' => $this->input->post('lama_belajar')
       ];
 
@@ -136,26 +149,42 @@ class Landing extends CI_Controller {
   }
 
   public function dokumentasi() {
+    $data['dokumentasi'] = $this->dokumentasi->tampilkan_dokumentasi();
+
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
-    $this->load->view('app/dokumentasi/semua');
+    $this->load->view('app/dokumentasi/semua', $data);
+    $this->load->view('template/footer');
+  }
+
+  public function single_dokumentasi($id) {
+    $data['dokumentasi'] = $this->dokumentasi->tampilkan_dokumentasi($id);
+
+    $this->load->view('template/header', $this->data);
+    $this->load->view('template/topbar');
+    $this->load->view('template/navbar');
+    $this->load->view('app/dokumentasi/single', $data);
     $this->load->view('template/footer');
   }
 
   public function kurikulum() {
+    $data['kurikulum'] = $this->akademik->tampilkan_kurikulum();
+
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
-    $this->load->view('app/dokumentasi/kurikulum');
+    $this->load->view('app/dokumentasi/kurikulum', $data);
     $this->load->view('template/footer');
   }
 
   public function kalender() {
+    $data['kalender'] = $this->akademik->tampilkan_kalender();
+
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
-    $this->load->view('app/dokumentasi/kalender');
+    $this->load->view('app/dokumentasi/kalender', $data);
     $this->load->view('template/footer');
   }
 }

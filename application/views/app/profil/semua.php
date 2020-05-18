@@ -326,20 +326,23 @@
         <div class="col-12 text-center mb-2">
           <h3>Guru / Pendidik</h3>
         </div>
+        <?php foreach($guru as $g): ?>
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end"
+            <a href="#" class="block-20 d-flex align-items-end"
               style="background-image: url('<?= base_url() ?>assets/images/image_1.jpg');">
             </a>
             <div class="text bg-white p-4">
-              <h3 class="heading"><a href="#">Muhammad Riyadhi</a></h3>
-              <span class="nip_style">1600018001</span>
+              <h3 class="heading"><a href="#"><?= $g['nama'] ?></a></h3>
+              <span class="nip_style"><?= $g['NIP'] ?></span>
               <br>
-              <span class="jabatan_style">Guru Mengemudi</span>
+              <span class="jabatan_style"><?= $g['bidang'] ?></span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 ftco-animate">
+        <?php endforeach; ?>
+
+        <!-- <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="blog-single.html" class="block-20 d-flex align-items-end"
               style="background-image: url('<?= base_url() ?>assets/images/image_2.jpg');">
@@ -352,6 +355,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="blog-single.html" class="block-20 d-flex align-items-end"
@@ -406,27 +410,32 @@
               <span class="jabatan_style">Guru Mengemudi</span>
             </div>
           </div>
-        </div>
+        </div> -->
+
       </div>
 
       <div class="row">
         <div class="col-12 text-center mb-2">
           <h3>Karyawan</h3>
         </div>
+
+        <?php foreach($staff as $s): ?>
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end"
+            <a href="#" class="block-20 d-flex align-items-end"
               style="background-image: url('<?= base_url() ?>assets/images/image_1.jpg');">
             </a>
             <div class="text bg-white p-4">
-              <h3 class="heading"><a href="#">Palui</a></h3>
-              <span class="nip_style">1600018000</span>
+              <h3 class="heading"><a href="#"><?= $s['nama'] ?></a></h3>
+              <span class="nip_style"><?= $s['NIP'] ?></span>
               <br>
-              <span class="jabatan_style">Tukang Sapu</span>
+              <span class="jabatan_style"><?= $s['bidang'] ?></span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 ftco-animate">
+        <?php endforeach; ?>
+
+        <!-- <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="blog-single.html" class="block-20 d-flex align-items-end"
               style="background-image: url('<?= base_url() ?>assets/images/image_2.jpg');">
@@ -439,6 +448,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="blog-single.html" class="block-20 d-flex align-items-end"
@@ -451,7 +461,7 @@
               <span class="jabatan_style">Pesuruh</span>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
