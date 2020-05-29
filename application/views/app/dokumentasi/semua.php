@@ -5,7 +5,7 @@
         <div class="col-md-6 col-lg-4 ftco-animate">
           <div class="blog-entry">
             <a href="<?= base_url('Landing/single_dokumentasi/'). $d['id'] ?>" class="block-20 d-flex align-items-end"
-              style="background-image: url('<?= base_url() ?>assets/<?= $d['gambar'] ?>');">
+              style="background-image: url('http://localhost:8080/admin_sdn_palampitan/<?= $d['gambar'] ?>');">
               <div class="meta-date text-center p-2">
                 <span class="day"><?= date('d', strtotime($d['tanggal_dibuat'])) ?></span>
                 <span class="mos"><?= date('M', strtotime($d['tanggal_dibuat'])) ?></span>
@@ -13,7 +13,7 @@
               </div>
             </a>
             <div class="text bg-white p-4">
-              <h3 class="heading"><a href="#"><?= $d['judul'] ?></a></h3>
+              <h3 class="heading"><a href="<?= base_url('Landing/single_dokumentasi/') . $d['id'] ?>"><?= $d['judul'] ?></a></h3>
               <p><?= $d['konten'] ?></p>
               <div class="d-flex align-items-center mt-4">
                 <p class="mb-0"><a href="<?= base_url('Landing/single_dokumentasi/'). $d['id'] ?>" class="btn btn-primary">Lanjut Baca <span

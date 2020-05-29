@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PPDB_Model extends CI_Model {
+  
   public function registrasi($data_siswa, $data_wali, $data_asal_siswa) {
     $this->db->insert('ppdb_calon_siswa', $data_siswa);
     $id_siswa = $this->db->insert_id();
@@ -13,5 +14,19 @@ class PPDB_Model extends CI_Model {
     $requirement_dua = $this->db->insert('ppdb_asal_mula_siswa', $data_asal_siswa);
 
     return ($requirement_satu && $requirement_satu);
+  }
+
+  public function ambil_informasi($tahun) {
+    $this->db->select('informasi');
+    $this->db->from('ppdb');
+    $this->db->where('tahun_ajaran', $tahun);
+    return $this->db->get()->row();
+  }
+
+  public function ambil_edaran($tahun) {
+    $this->db->select('edaran');
+    $this->db->from('ppdb');
+    $this->db->where('tahun_ajaran', $tahun);
+    return $this->db->get()->row();
   }
 }

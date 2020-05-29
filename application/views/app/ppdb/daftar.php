@@ -18,19 +18,19 @@
           <div class="card-body">
               <div class="form-group row">
                 <label for="" class="col-3">Nama lengkap</label>
-                <input type="text" class="form-control col-8" name="nama_lengkap">
+                <input type="text" class="form-control col-8" name="nama_lengkap" required>
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Nama Panggilan</label>
-                <input type="text" class="form-control col-8" name="nama_panggilan">
+                <input type="text" class="form-control col-8" name="nama_panggilan" required>
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">NIK</label>
-                <input type="text" class="form-control col-8" name="NIK_siswa">
+                <input type="text" class="form-control col-8" name="NIK_siswa" required>
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Jenis Kelamin</label>
-                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control col-8">
+                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control col-8" required>
                   <option value="l" selected>Laki-laki</option>
                   <option value="p">Perempuan</option>
                 </select>
@@ -39,19 +39,19 @@
                 <div class="col-4">
                   <div class="form-group">
                     <label for="">Tempat Lahir</label>
-                    <input type="text" class="form-control" name="tempat_lahir">
+                    <input type="text" class="form-control" name="tempat_lahir" required>
                   </div>
                 </div>
                 <div class="col-8">
                   <div class="form-group">
                     <label for="">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tanggal_lahir">
+                    <input type="date" class="form-control" name="tanggal_lahir" required>
                   </div>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Agama</label>
-                <select name="agama" id="agama" class="form-control col-8">
+                <select name="agama" id="agama" class="form-control col-8" required>
                   <option value="islam">Islam</option>
                   <option value="kristen">Kristen</option>
                   <option value="hindu">Hindu</option>
@@ -61,55 +61,55 @@
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Kewarganegaraan</label>
-                <input type="text" class="form-control col-8" name="kewarganegaraan">
+                <input type="text" class="form-control col-8" name="kewarganegaraan" required>
               </div>
               <div class="row">
                 <div class="col-3">
                   <div class="form-group">
                     <label for="">Anak nomor ke-</label>
-                    <input type="number" class="form-control" name="anak_ke" min=1 value=1>
+                    <input type="number" class="form-control" name="anak_ke" min=1 value=1 required>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="form-group">
                     <label for="">Jumlah Saudara Kandung</label>
-                    <input type="number" class="form-control" name="saudara_kandung" min=0>
+                    <input type="number" class="form-control" name="saudara_kandung" min=0 value=0 required>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="form-group">
                     <label for="">Jumlah Saudara Tiri</label>
-                    <input type="number" class="form-control" name="saudara_tiri" min=0>
+                    <input type="number" class="form-control" name="saudara_tiri" min=0 value=0 required>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="form-group">
                     <label for="">Jumlah Saudara Angkat</label>
-                    <input type="number" class="form-control" name="saudara_angkat" min=0>
+                    <input type="number" class="form-control" name="saudara_angkat" min=0 value=0 required>
                   </div>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Bahasa Sehari-hari</label>
-                <input type="text" class="form-control col-8" name="bahasa">
+                <input type="text" class="form-control col-8" name="bahasa" required>
               </div>
               <div class="row">
                 <div class="col-4">
                   <div class="form-group">
                     <label for="">Berat Badan (kg)</label>
-                    <input type="number" class="form-control" name="berat_badan" min=1>
+                    <input type="number" class="form-control" name="berat_badan" min=1 required>
                   </div>
                 </div>
                 <div class="col-4">
                   <div class="form-group">
                     <label for="">Tinggi Badan (cm)</label>
-                    <input type="number" class="form-control" name="tinggi_badan" min=1>
+                    <input type="number" class="form-control" name="tinggi_badan" min=1 required>
                   </div>
                 </div>
                 <div class="col-4">
                   <div class="form-group">
                     <label for="">Golongan Darah</label>
-                    <select name="golongan_darah" id="golongan_darah" class="form-control">
+                    <select name="golongan_darah" id="golongan_darah" class="form-control" required>
                       <option value="A">A</option>
                       <option value="B">B</option>
                       <option value="AB">AB</option>
@@ -124,18 +124,18 @@
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Alamat Tempat Tinggal</label>
-                <textarea name="alamat" id="alamat_tinggal" class="form-control col-8" cols="30" rows="10"></textarea>
+                <textarea name="alamat" id="alamat_tinggal" class="form-control col-8" cols="30" rows="10" required></textarea>
               </div>
               <div class="form-group row">
                 <label for="" class="col-3">Bertempat Tinggal Pada</label>
-                <select name="tinggal_dengan" id="tinggal_dengan" class="form-control col-8">
+                <select name="tinggal_dengan" id="tinggal_dengan" class="form-control col-8" required>
                   <option value="Ortu">Orang Tua</option>
                   <option value="Paman">Paman / Tante</option>
                   <option value="Lainnya">Lainnya</option>
                 </select>
               </div>
               <div class="form-group row">
-                <label for="" class="col-3">Nomor HP yang bisa dihubungi</label>
+                <label for="" class="col-3">Nomor HP yang bisa dihubungi</label required>
                 <input type="text" class="form-control col-8" name="nomor_hp">
               </div>
 
@@ -154,15 +154,15 @@
             <h4>Ayah</h4>
             <div class="form-group row">
               <label for="" class="col-3">Nama</label>
-              <input type="text" class="form-control col-8" name="nama_ayah">
+              <input type="text" class="form-control col-8" name="nama_ayah" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">NIK</label>
-              <input type="text" class="form-control col-8" name="NIK_ayah">
+              <input type="text" class="form-control col-8" name="NIK_ayah" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Pendidikan</label>
-              <select name="pendidikan_ayah" id="pendidikan_ayah_kandung" class="form-control col-8">
+              <select name="pendidikan_ayah" id="pendidikan_ayah_kandung" class="form-control col-8" required>
                 <option value="TK">TK</option>
                 <option value="SD">SD</option>
                 <option value="SMP">SMP</option>
@@ -174,11 +174,11 @@
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Pekerjaan</label>
-              <input type="text" class="form-control col-8" name="pekerjaan_ayah">
+              <input type="text" class="form-control col-8" name="pekerjaan_ayah" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Penghasilan perbulan</label>
-              <input type="number" class="form-control col-8" name="penghasilan_ayah" min=1>
+              <input type="number" class="form-control col-8" name="penghasilan_ayah" min=0 required>
             </div>
 
             <br>
@@ -186,15 +186,15 @@
             <h4>Ibu</h4>
             <div class="form-group row">
               <label for="" class="col-3">Nama</label>
-              <input type="text" class="form-control col-8" name="nama_ibu">
+              <input type="text" class="form-control col-8" name="nama_ibu" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">NIK</label>
-              <input type="text" class="form-control col-8" name="NIK_ibu">
+              <input type="text" class="form-control col-8" name="NIK_ibu" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Pendidikan</label>
-              <select name="pendidikan_ibu" id="pendidikan_ibu_kandung" class="form-control col-8">
+              <select name="pendidikan_ibu" id="pendidikan_ibu_kandung" class="form-control col-8" required>
                 <option value="TK">TK</option>
                 <option value="SD">SD</option>
                 <option value="SMP">SMP</option>
@@ -206,11 +206,11 @@
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Pekerjaan</label>
-              <input type="text" class="form-control col-8" name="pekerjaan_ibu">
+              <input type="text" class="form-control col-8" name="pekerjaan_ibu" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Penghasilan perbulan</label>
-              <input type="number" class="form-control col-8" name="penghasilan_ibu" min=1>
+              <input type="number" class="form-control col-8" name="penghasilan_ibu" min=0 required>
             </div>
 
             <br>
@@ -257,29 +257,29 @@
           <div class="card-body">
             <div class="form-group row">
               <label for="" class="col-3">Masuk sekolah ini sebagai</label>
-              <select name="masuk_sebagai" id="sebagai_siswa" class="form-control col-8">
+              <select name="masuk_sebagai" id="sebagai_siswa" class="form-control col-8" required>
                 <option value="baru">Siswa Baru</option>
                 <option value="mutasi">Siswa Mutasi</option>
               </select>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Asal siswa</label>
-              <select name="asal_siswa" id="asal_sekolah_siswa" class="form-control col-8">
+              <select name="asal_siswa" id="asal_sekolah_siswa" class="form-control col-8" required>
                 <option value="TK">TK</option>
                 <option value="SD">SD</option>
               </select>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Nama Sekolah</label>
-              <input type="text" class="form-control col-8" name="nama_sekolah">
+              <input type="text" class="form-control col-8" name="nama_sekolah" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Nomor/Tahun Surat Keterangan</label>
-              <input type="text" class="form-control col-8" name="nomor_tahun_sk">
+              <input type="text" class="form-control col-8" name="nomor_tahun_sk" required>
             </div>
             <div class="form-group row">
               <label for="" class="col-3">Lama belajar</label>
-              <input type="number" class="form-control col-8" name="lama_belajar">
+              <input type="number" class="form-control col-8" name="lama_belajar" required>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 <div class="container mb-4">
   <div class="row">
     <div class="col-11 mx-auto">
-      <img src="<?= base_url('assets/') . $dokumentasi['gambar'] ?>" class="d-block w-100 my-2" alt="Gambar Artikel" height="500px">
+      <img src="http://localhost:8080/admin_sdn_palampitan/<?= $dokumentasi['gambar'] ?>" class="d-block w-100 my-2" alt="Gambar Artikel" height="500px">
     </div>
   </div>
   <div class="row">

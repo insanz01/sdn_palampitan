@@ -12,6 +12,8 @@ class Landing extends CI_Controller {
     $this->load->model('Akademik_Model', 'akademik');
     $this->load->model('Dokumentasi_Model', 'dokumentasi');
     $this->load->model('Karyawan_Model', 'karyawan');
+    $this->load->model('Kepsek_Model', 'kepsek');
+    $this->load->model('Sekolah_Model', 'sekolah');
     
     $this->data['judul_aplikasi'] = "SEKOLAH DASAR NEGERI PALAMPITAN";
     $this->data['mendaftar'] = FALSE;
@@ -19,9 +21,19 @@ class Landing extends CI_Controller {
 
   public function index() {
 
+    // ? bagian ini membutuhkan :
+    // * gambar sekolah [done]
+    // * deskripsi sekolah [done]
+    // * biodata kepala sekolah [done]
+    // * visi dan misi [done]
+
+    $data['sekolah'] = $this->sekolah->tampilkan_data_sekolah();
+
     $data['visi'] = $this->visi_misi->tampilkan_visi();
     $data['misi'] = $this->visi_misi->tampilkan_misi();
     
+    $data['kepala_sekolah'] = $this->kepsek->tampilkan_kepala_sekolah();
+
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
@@ -30,6 +42,22 @@ class Landing extends CI_Controller {
   }
 
   public function profil() {
+
+    // ? bagian ini membutuhkan :
+    // * gambar sekolah [done]
+    // * data sekolah
+    // * identitas sekolah
+    // * alamat sekolah
+    // * bank sekolah
+    // * kepala sekolah [done]
+    // * kontak sekolah
+    // * data guru [done]
+    // * data staff [done]
+
+    $data['kepala_sekolah'] = $this->kepsek->tampilkan_kepala_sekolah();
+
+    $data['sekolah'] = $this->sekolah->tampilkan_data_sekolah();
+
     $data['guru'] = $this->karyawan->tampilkan_karyawan('Guru');
     $data['staff'] = $this->karyawan->tampilkan_karyawan('Staff');
 
@@ -130,6 +158,8 @@ class Landing extends CI_Controller {
     $data['tahun_satu'] = $tahun;
     $data['tahun_dua'] = $tahun + 1;
 
+    $data['informasi'] = $this->ppdb->ambil_informasi($tahun)->informasi;
+
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
     $this->load->view('template/navbar');
@@ -140,6 +170,8 @@ class Landing extends CI_Controller {
   public function ppdb_edaran($tahun) {
     $data['tahun_satu'] = $tahun;
     $data['tahun_dua'] = $tahun + 1;
+
+    $data['edaran'] = $this->ppdb->ambil_edaran($tahun)->edaran;
 
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');

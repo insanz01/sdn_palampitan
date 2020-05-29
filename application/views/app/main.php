@@ -38,8 +38,8 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-12 ftco-animate">
-					<a href="<?= base_url() ?>assets/images/course-1.jpg" class="gallery img d-flex align-items-center"
-						style="background-image: url(<?= base_url() ?>assets/images/course-1.jpg); height: 500px !important; width: 90% !important; margin: 20px auto !important;">
+					<a href="http://localhost:8080/admin_sdn_palampitan/<?= $sekolah['foto'] ?>" class="gallery img d-flex align-items-center"
+						style="background-image: url(http://localhost:8080/admin_sdn_palampitan/<?= $sekolah['foto'] ?>); height: 500px !important; width: 90% !important; margin: 20px auto !important;">
 					</a>
 				</div>
 				<!-- <div class="col-md-3 ftco-animate">
@@ -65,7 +65,7 @@
 		<div class="container-fluid px-4">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
-					<h2 class="mb-4"><span>"Pendidikan adalah bekal terbaik untuk perjalanan hidup. Ini bagian deskripsi sekolahnya yad"</span></h2>
+					<h2 class="mb-4"><span>"<?= $sekolah['deskripsi'] ?>"</span></h2>
 				</div>
 			</div>
 		</div>
@@ -77,7 +77,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2 d-flex">
 				<div class="col-md-6 align-items-stretch d-flex">
-					<div class="img d-flex align-items-center w-100" style="background-image: url(https://4.bp.blogspot.com/-uKv5K6OEDzI/WEI6rxbxPcI/AAAAAAAAAEg/F3ZL2k4qOyI0GBzjNJXSbYogMBdole3YACLcB/s1600/IMG_20161201_090912.jpg);">
+					<div class="img d-flex align-items-center w-100" style="background-image: url(http://localhost:8080/admin_sdn_palampitan/<?= $kepala_sekolah['foto'] ?>);">
 						<!-- <div class="video justify-content-center">
 							<a href="https://4.bp.blogspot.com/-uKv5K6OEDzI/WEI6rxbxPcI/AAAAAAAAAEg/F3ZL2k4qOyI0GBzjNJXSbYogMBdole3YACLcB/s1600/IMG_20161201_090912.jpg"
 								class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
@@ -93,7 +93,7 @@
 							<p>Nama</p>
 						</div>
 						<div class="col-8">
-							<p>Muhammad Riyadhi</p>
+							<p><?= $kepala_sekolah['nama'] ?></p>
 						</div>
 					</div>
 					<div class="row">
@@ -101,7 +101,7 @@
 							<p>NIK</p>
 						</div>
 						<div class="col-8">
-							<p>1600018001</p>
+							<p><?= $kepala_sekolah['NIP'] ?></p>
 						</div>
 					</div>
 					<div class="row">
@@ -109,7 +109,7 @@
 							<p>Alamat</p>
 						</div>
 						<div class="col-8">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas tenetur atque ipsum recusandae voluptates aliquam, repellat in praesentium perspiciatis labore, quam ducimus dolores eligendi? Doloribus cumque veniam ex maiores nisi?</p>
+							<p><?= $kepala_sekolah['alamat'] ?></p>
 						</div>
 					</div>
 				</div>
