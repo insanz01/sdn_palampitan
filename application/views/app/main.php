@@ -1,30 +1,19 @@
 <section class="home-slider owl-carousel">
 
-		<div class="slider-item" style="background-image:url(<?= base_url() ?>assets/images/bg_2.jpg);">
+		<?php foreach($landing as $l): ?>
+		<div class="slider-item" style="background-image:url(http://localhost:8080/admin_sdn_palampitan/<?= $l['gambar'] ?>);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">"Pendidikan adalah bekal terbaik untuk perjalanan hidup."</h1>
-						<p>- Aristoteles -</p>
+						<h1 class="mb-4">"<?= $l['judul'] ?>"</h1>
+						<p>- <?= $l['subjudul'] ?> -</p>
 						<!-- <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">DAFTAR PPDB</a></p> -->
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="slider-item" style="background-image:url(<?= base_url() ?>assets/images/bg_1.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-					<div class="col-md-6 ftco-animate">
-						<h1 class="mb-4">"Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia."</h1>
-						<p>- Nelson Mandela -</p>
-						<!-- <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">DAFTAR PPDB</a></p> -->
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php endforeach; ?>
 
 	</section>
 

@@ -7,9 +7,9 @@
 						<div class="block-23 mb-3">
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">Jl. Lambung Mangkurat RT 05 Desa Palampitan Hulu Kec. Amuntai Tengah Kab. Hulu Sungai utara 71419</span></li>
-								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+								<li><a href="#"><span class="icon icon-phone"></span><span class="text"><?= $kontak['nomor_hp'] ?></span></a></li>
 								<li><a href="#"><span class="icon icon-envelope"></span><span
-											class="text">muhammadriyadhi08@gmail.com</span></a></li>
+											class="text"><?= $kontak['email'] ?></span></a></li>
 							</ul>
 						</div>
 					</div>

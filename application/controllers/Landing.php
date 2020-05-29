@@ -14,7 +14,9 @@ class Landing extends CI_Controller {
     $this->load->model('Karyawan_Model', 'karyawan');
     $this->load->model('Kepsek_Model', 'kepsek');
     $this->load->model('Sekolah_Model', 'sekolah');
-    
+    $this->load->model('Landing_Model', 'landing');
+
+    $this->data['kontak'] = $this->sekolah->tampilkan_kontak();    
     $this->data['judul_aplikasi'] = "SEKOLAH DASAR NEGERI PALAMPITAN";
     $this->data['mendaftar'] = FALSE;
   }
@@ -26,6 +28,8 @@ class Landing extends CI_Controller {
     // * deskripsi sekolah [done]
     // * biodata kepala sekolah [done]
     // * visi dan misi [done]
+
+    $data['landing'] = $this->landing->tampilkan_data_landing();
 
     $data['sekolah'] = $this->sekolah->tampilkan_data_sekolah();
 

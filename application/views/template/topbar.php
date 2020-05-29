@@ -11,14 +11,14 @@
 							</div>
 							<div class="text">
 								<span>Informasi / Pertanyaan</span>
-								<span>muhammadriyadhi08@gmail.com</span>
+								<span><?= $kontak['email'] ?></span>
 							</div>
 						</div>
 						<div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
 							<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
 							<div class="text">
 								<span>Hubungi kami</span>
-								<span>Whats App: + 1235 2355 98</span>
+								<span>Whats App: <?= $kontak['nomor_hp'] ?></span>
 							</div>
 						</div>
 						<div class="col-md topper d-flex align-items-center justify-content-end">
