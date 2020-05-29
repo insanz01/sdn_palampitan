@@ -20,13 +20,13 @@ class PPDB_Model extends CI_Model {
     $this->db->select('informasi');
     $this->db->from('ppdb');
     $this->db->where('tahun_ajaran', $tahun);
-    return $this->db->get()->row();
+    return $this->db->get()->row_array();
   }
 
   public function ambil_edaran($tahun) {
     $this->db->select('edaran');
     $this->db->from('ppdb');
     $this->db->where('tahun_ajaran', $tahun);
-    return $this->db->get()->row();
+    return $this->db->get()->row_array();
   }
 }

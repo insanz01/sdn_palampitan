@@ -158,7 +158,7 @@ class Landing extends CI_Controller {
     $data['tahun_satu'] = $tahun;
     $data['tahun_dua'] = $tahun + 1;
 
-    $data['informasi'] = $this->ppdb->ambil_informasi($tahun)->informasi;
+    $data['ppdb'] = $this->ppdb->ambil_informasi($tahun);
 
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
@@ -171,7 +171,7 @@ class Landing extends CI_Controller {
     $data['tahun_satu'] = $tahun;
     $data['tahun_dua'] = $tahun + 1;
 
-    $data['edaran'] = $this->ppdb->ambil_edaran($tahun)->edaran;
+    $data['ppdb'] = $this->ppdb->ambil_edaran($tahun);
 
     $this->load->view('template/header', $this->data);
     $this->load->view('template/topbar');
